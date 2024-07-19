@@ -21,7 +21,7 @@
   gap: 100px;
   padding: 100px 0 103px;
   color: var(--text-color, #00cc14);
-  font-family: var(--inter-font, 'Inter', sans-serif);
+  font-family: var(--main-font, 'Inter', sans-serif);
   background-color: var(--background-color, #fff);
   background-image: var(--background-image);
   background-size: cover;
@@ -55,14 +55,14 @@
 
 .header__title {
   color: var(--text-color, #000);
-  font-family: var(--press-font, 'PressStart2P', monospace);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
   text-transform: uppercase;
 }
 
 .header__subtitle {
   color: var(--text-color, #000);
-  font-family: var(--press-font, 'PressStart2P', monospace);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
   text-transform: uppercase;
 }
@@ -80,7 +80,7 @@
 }
 
 .theme-menu__item {
-  font-family: var(--press-font, 'PressStart2P', monospace);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: 14px;
 }
 
@@ -160,7 +160,7 @@
 
 .card__title {
   color: var(--text-color, #000);
-  font-family: var(--inter-font, 'Inter', sans-serif);
+  font-family: var(--main-font, 'Inter', sans-serif);
   font-size: var(--font-size, 18px);
   font-variation-settings: 'wght' var(--title-weight);
 }
@@ -179,6 +179,7 @@
   inset: 0;
   z-index: -1;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -187,7 +188,7 @@
   position: absolute;
   opacity: 0.5;
   color: var(--text-color);
-  font-family: var(--press-font, 'PressStart2P', monospace);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
@@ -213,7 +214,7 @@
 
 .card__description {
   color: var(--text-color, #000);
-  font-family: var(--inter-font, 'Inter', sans-serif);
+  font-family: var(--main-font, 'Inter', sans-serif);
   font-size: var(--font-size, 18px);
   line-height: 116%;
   font-variation-settings: 'wght' var(--text-weight);
@@ -234,6 +235,18 @@
   background-color: transparent;
   cursor: pointer;
   block-size: 34px;
+  outline: 2px solid transparent;
+  transition: outline 0.3s;
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--text-color, #000);
+    color: var(--text-color, #000);
+  }
 }
 
 .card__like-button {
@@ -280,7 +293,7 @@
 
 .button__text {
   color: var(--button-text-color, #000);
-  font-family: var(--press-font, 'PressStart2P', monospace);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
@@ -293,18 +306,6 @@
 
 .sparks {
   opacity: 0;
-}
-
-.condition {
-  &:focus {
-    border: none;
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--text-color, #000);
-    color: var(--text-color, #000);
-  }
 }
 
 /* #endregion */
@@ -366,7 +367,7 @@ dialog::backdrop {
 .modal__text {
   max-inline-size: 237px;
   color: var(--text-color, #000);
-  font-family: var(--press-font, 'PressStart2P', fantasy);
+  font-family: var(--decorated-font, 'PressStart2P', fantasy);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;

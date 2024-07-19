@@ -6,14 +6,15 @@
 */
 
 :root.theme-light {
-  --inter-font: 'Inter', sans-serif;
-  --press-font: 'PressStart2P', monospace;
+  --main-font: 'Inter', sans-serif;
+  --decorated-font: 'PressStart2P', fantasy;
   --title-weight: 700;
   --text-weight: 400;
   --background-color: #fff;
   --text-color: #000;
   --button-text-color: #fff;
   --heart-sparks-color: #ff0000;
+  --heart-contour-color: #000;
   --accent-color-first: #d3d3d3;
   --accent-color-second: #e7e7e7;
   --accent-color-third: #1a1a1a;
@@ -21,14 +22,15 @@
 }
 
 :root.theme-dark {
-  --inter-font: 'Inter', sans-serif;
-  --press-font: 'PressStart2P', monospace;
+  --main-font: 'Inter', sans-serif;
+  --decorated-font: 'PressStart2P', fantasy;
   --title-weight: 700;
   --text-weight: 400;
   --background-color: #000;
   --text-color: #00cc14;
   --button-text-color: #00cc14;
   --heart-sparks-color: #ff0000;
+  --heart-contour-color: #000;
   --accent-color-first: #000;
   --accent-color-second: #007f0c;
   --accent-color-third: #004306;
@@ -37,14 +39,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --inter-font: 'Inter', sans-serif;
-    --press-font: 'PressStart2P', monospace;
+    --main-font: 'Inter', sans-serif;
+    --decorated-font: 'PressStart2P', fantasy;
     --title-weight: 700;
     --text-weight: 400;
     --background-color: #000;
     --text-color: #00cc14;
     --button-text-color: #00cc14;
     --heart-sparks-color: #ff0000;
+    --heart-contour-color: #000;
     --accent-color-first: #000;
     --accent-color-second: #007f0c;
     --accent-color-third: #004306;

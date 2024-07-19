@@ -25,66 +25,66 @@
 .like-icon {
   .core {
     fill: transparent;
-    transition: fill 0.5s 0.05s ease-in-out;
+    transition: fill 0.3s 0.05s linear;
   }
 
   .main-body {
     fill: transparent;
-    transition: fill 0.3s ease-in-out;
+    transition: fill 0.3s linear;
   }
 
   .contour {
     fill: var(--text-color, #000);
-    transition: fill 0.1s ease-in-out;
+    transition: fill 0.1s linear;
   }
 
   &:hover {
     .core {
       fill: var(--text-color, #000);
-      transition: fill 0.3s ease-in-out;
+      transition: fill 0.3s linear;
     }
 
     .main-body {
       fill: var(--text-color, #000);
-      transition: fill 0.3s 0.05s ease-in-out;
+      transition: fill 0.3s 0.05s linear;
     }
   }
   
   &:active {
     .core {
       fill: var(--heart-sparks-color, #ff0000);
-      transition: fill 0.3s ease-in-out;
+      transition: fill 0.3s linear;
     }
 
     .main-body {
       fill: var(--heart-sparks-color, #ff0000);
-      transition: fill 0.3s 0.05s ease-in-out;
+      transition: fill 0.3s 0.05s linear;
     }
   }
 
   &.is-liked {
     .core {
       fill: var(--heart-sparks-color, #ff0000);
-      transition: fill 0.3s ease-in-out;
+      transition: fill 0.3s linear;
     }
 
     .main-body {
       fill: var(--heart-sparks-color, #ff0000);
-      transition: fill 0.3s 0.05s ease-in-out;
+      transition: fill 0.3s 0.05s linear;
     }
 
     .contour {
-      fill: var(--text-color, #000);
-      transition: fill 0.3s 0.06s ease-in-out;
+      fill: var(--heart-sparks-color, #ff0000);
+      transition: fill 0.3s 0.06s linear;
     }
 
     .heart {
       transform-origin: center;
-      animation: heart 0.3s 0.1s ease-in-out 1 alternate;
+      animation: heart 0.3s 0.1s ease-in 1 alternate;
     }
 
     .sparks {
-      animation: sparks 0.3s 0.3s ease-in-out 1 alternate;
+      animation: sparks 0.3s 0.3s ease-in 1 alternate;
     }
   }
 }
