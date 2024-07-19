@@ -12,3 +12,97 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+@keyframes marker-animation {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+.like-icon {
+  .core {
+    fill: transparent;
+    transition: fill 0.5s 0.05s ease-in-out;
+  }
+
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  .contour {
+    fill: var(--text-color, #000);
+    transition: fill 0.1s ease-in-out;
+  }
+
+  &:hover {
+    .core {
+      fill: var(--text-color, #000);
+      transition: fill 0.3s ease-in-out;
+    }
+
+    .main-body {
+      fill: var(--text-color, #000);
+      transition: fill 0.3s 0.05s ease-in-out;
+    }
+  }
+  
+  &:active {
+    .core {
+      fill: var(--heart-sparks-color, #ff0000);
+      transition: fill 0.3s ease-in-out;
+    }
+
+    .main-body {
+      fill: var(--heart-sparks-color, #ff0000);
+      transition: fill 0.3s 0.05s ease-in-out;
+    }
+  }
+
+  &.is-liked {
+    .core {
+      fill: var(--heart-sparks-color, #ff0000);
+      transition: fill 0.3s ease-in-out;
+    }
+
+    .main-body {
+      fill: var(--heart-sparks-color, #ff0000);
+      transition: fill 0.3s 0.05s ease-in-out;
+    }
+
+    .contour {
+      fill: var(--text-color, #000);
+      transition: fill 0.3s 0.06s ease-in-out;
+    }
+
+    .heart {
+      transform-origin: center;
+      animation: heart 0.3s 0.1s ease-in-out 1 alternate;
+    }
+
+    .sparks {
+      animation: sparks 0.3s 0.3s ease-in-out 1 alternate;
+    }
+  }
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
